@@ -1,0 +1,190 @@
+/* Google Fonts - Poppins */ 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root{
+    --bg-color: #1B1F24;
+    --card-color: #2D343F;
+    --white-color: #fff;
+    --color-primary: #176AE7;
+
+    --card-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+*{ 
+    padding: 0; 
+    margin: 0; 
+    box-sizing: border-box; 
+    font-family: 'Poppins', sans-serif; 
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--white-color);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-wrapper{
+    padding: 1.875rem;
+    background: var(--card-color);
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    max-width: 500px;
+    width: 100%;
+}
+.infoGame-wrapper,
+.gameStarted-wrapper,
+.finishGame-wrapper{
+    display: none;
+}
+.infoGame-wrapper.active,
+.gameStarted-wrapper.active,
+.finishGame-wrapper.active{
+    display: block;
+}
+
+.card-box{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.card-box h4{
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-align: center;
+    flex: 1;
+}
+.card-box .heading{
+    display: flex;
+    justify-content: space-between;
+}
+.card-box .heading p{
+    font-size: .875rem;
+    font-weight: 500;
+}
+.infoGame-box p{
+    font-size: .875rem;
+    color: #D6D6D6;
+    text-align: justify;
+}
+.card-box button{
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    width: 100%;
+    transition: 300ms linear;
+
+    background: var(--color-primary);
+    box-shadow: 1px 1px 10px 2px rgba(23, 106, 231, 0.35);
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--white-color);
+    padding: .625rem;
+}
+.card-box button:hover{
+    opacity: 0.8;
+}
+
+.status{
+    display: none;
+
+    padding: 0.5rem;
+    background: #0DAD0A;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px 2px rgba(13, 173, 10, 0.35);
+    text-align: center;
+}
+.answerText{
+    display: none;
+}
+.status.incorrect{
+    background: #CA0E0E;
+    box-shadow: 1px 1px 10px 2px rgba(202, 14, 14, 0.35);
+}
+.status.active{
+    display: block;
+}
+.status span{
+    font-size: 1rem;
+    font-weight: 600;
+}
+.status p{
+    font-size: .875rem;
+    font-weight: 500;
+}
+.status p span{
+    font-weight: 400;
+}
+.question{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    max-width: 350px;
+    width: 100%;
+    padding: .5rem;
+    background: #363C46;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+
+    font-size: 1.5625rem;
+    font-weight: 600;
+    letter-spacing: 10px;
+}
+.answer{
+    border: 0;
+    outline: 0;
+
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--white-color);
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-align: center;
+
+    max-width: 200px;
+    width: 100%;
+    padding: .5rem;
+    background: #393F49;
+    border-radius: 5px;
+    box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.answer::-webkit-outer-spin-button,
+.answer::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#finishText{
+    margin-top: -20px;
+    text-align: center;
+    font-size: .875rem;
+    font-weight: 500;
+}
+.stats{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin: -10px 0;
+}
+.stats p{
+    font-size: .9375rem;
+    font-weight: 500;
+    color: var(--white-color);
+}
+.stats span{
+    font-weight: 400;
+    color: #D6D6D6;
+}
+.finishGame-box button{
+    margin-top: -15px;
+}

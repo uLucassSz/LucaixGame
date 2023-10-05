@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Jogo de Matemática</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="infoGame-wrapper active card-wrapper">
+        <div class="infoGame-box card-box">
+            <h4>Opa! Seja bem-vindo(a)!</h4>
+
+            <p>O objetivo do jogo é testar suas habilidades matemáticas, fornecendo perguntas matemáticas e aumentando o nível de dificuldade à medida que você acerta as respostas. Você tem um máximo de 5 erros antes de o jogo finalizar.</p>
+    
+            <span>Em fim... Vamos jogar?</span>
+    
+            <button onclick="startGame()">JOGAR</button>
+        </div>
+    </div>
+
+    <div class="gameStarted-wrapper card-wrapper">
+        <div class="gameStarted-box card-box">           
+            <div class="heading">
+                <h4>NÍVEL <span id="nivel">1</span></h4>
+                <p>Erros: <span id="totalErros">0</span>/5</p>
+            </div>
+
+            <div class="status incorrect">
+                <span id="statusText">Resposta incorreta!</span>
+            </div>
+
+            <div class="question">2 + 2</div>
+
+            <input type="number" class="answer" id="answer">
+    
+            <button id="verify">RESOLVER</button>
+        </div>
+    </div>
+
+    <div class="finishGame-wrapper card-wrapper">
+        <div class="finishGame-box card-box">
+            <h4>Fim de jogo!</h4>
+            <p id="finishText">Parabéns! Você ganhou!</p>
+
+            <div class="stats">
+                <p>Acertos: <span id="acertos">37</span></p>
+                <p>Erros: <span id="erros">13</span></p>
+            </div>
+
+            <span>Gostaria de jogar novamente?</span>
+            <button onclick="restartGame()">JOGAR NOVAMENTE</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
